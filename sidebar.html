@@ -1,0 +1,134 @@
+{% load static %}
+
+
+{% block content %}
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+                <li class="menu-title">Menu</li>
+
+                <li>
+                    <a href="{% url 'index' %}" class="waves-effect">
+                        <i class="mdi mdi-home-variant-outline"></i><span
+                            class="badge rounded-pill bg-primary float-end">3</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-bank-fill"></i>
+                        <span>PURCHASE</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'add_pure_item' %}">Add Purchase Item</a></li>
+                        <li><a href="{% url 'purchage_list' %}">Purchase List</a></li>
+                   </ul>
+                </li>
+                
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-bank-fill"></i>
+                        <span>Customer</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'customer_list' %}">Customer List</a></li>
+                        <li><a href="{% url 'customer_add' %}">Customer Add</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-bank-fill"></i>
+                        <span>Nursery</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'nursery_list' %}">View Nursery</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'nursery_ledger' %}">View Ledger</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'partydelete' %}">View Party Final Ledger Delete</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-bank-fill"></i>
+                        <span>PB Sugar Cane</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'pb_customers' %}">PB Customer</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'pb_sugarcane' %}">View PB Sugar Cane</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'pb_ledger' %}">View PB Ledger</a></li>
+                    </ul>
+                </li>
+              
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-bank-fill"></i>
+                        <span>SB Sugar Cane</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'sb_customer' %}">SB Customer</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'sb_sugar' %}">View SB Sugar Cane</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'sb_ledger' %}">View SB Ledger</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-bank-fill"></i>
+                        <span>Labour</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'labour' %}">View Customer</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'view_labour' %}">View Labour</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'view_ledger' %}">View Ledger</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-bank-fill"></i>
+                        <span>Sugar Indent</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'in_cust' %}">In Customer List</a></li>
+                    </ul>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'in_list' %}">indent list</a></li>
+                </li>
+
+         
+            </ul></div>   
+
+              
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->
+{% endblock %}

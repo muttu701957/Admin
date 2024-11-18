@@ -1,0 +1,198 @@
+{% load static %}
+{% include 'sidebar.html' %}
+{% include 'header.html' %}
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <style>
+        </style>
+        <meta charset="utf-8" />
+        <title>Nursery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+        
+        <!-- jvectormap -->
+        <link href="{% static 'assets/libs/jqvmap/jqvmap.min.css' %}" rel="stylesheet" />
+
+        <!-- Bootstrap Css -->
+        <link href="{% static 'assets/css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{% static 'assets/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{% static 'assets/css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body data-sidebar="dark">
+        <div id="layout-wrapper">
+            <!-- ============================================================== -->
+          <!-- Start right Content here -->
+          <!-- ============================================================== -->
+
+          <div class="main-content">
+
+              <div class="page-content">
+                  <div class="container-fluid">
+                    <div class="card">
+                    <div class="card-body">
+                     <h1>Pb Invoice</h1>
+                     <hr>
+                      <!-- start page title -->
+
+                      <div class="row">
+                            <div class="col-sm-2">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="logo" height="100px" width="100px">
+                            </div>
+                            <div class="col-sm-8">
+                                <center><h4 style="color: green;"><u>ಶ್ರೀ ಬನಶ್ರೀ ನರ್ಸರಿ ಫಾರ್ಮ</u></h4>
+                                    <u><h5>ಸಾ|| ಅಂಗರಗಟ್ಟಿ.ತಾ|| ಬ್ಯಾಡಗಿ.ಜಿ|| ಹಾವೇರಿ.</h5></u></center>
+                            </div>
+                            <div class="col-sm-2">
+                                <h6>N:9242244731</h6>
+                                <h6>M:9591002731</h6>
+                                <h6>P:9535618731</h6>
+                                <h6>G:9972328131</h6>
+                            </div> 
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-4">
+                            <table class="table table-bordered" style="border: 1px;">
+                                <thead >
+                                    <tr style="background-color:rgba(217, 225, 242, 1.0);">
+                                        <b>
+                                        <th style="text-align: center;"><b>ದಿನಾಂಕ</b></th>
+                                        <th><b>ಸರಕುಪಟ್ಟಿ ಸಂಖ್ಯೆ</b></th>
+                                        </b>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{data.nursery_date}}</td>
+                                        <td>{{data.id}}</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered" style="border: 1px;">
+                                    <tr style="background-color:rgba(217, 225, 242, 1.0);">
+                                        <b>
+                                        <th style="text-align: center;" colspan="2">Bill</th>
+                                        </b>
+                                    </tr>
+                                    <tr>
+                                        <th style="background-color:rgba(217, 225, 242, 1.0);width:25%;">ಹೆಸರು</th>
+                                        <td>{{data.farmer_name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th style="background-color:rgba(217, 225, 242, 1.0);" >ವಿಳಾಸ</th>
+                                        <td>{{data.address}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th style="background-color:rgba(217, 225, 242, 1.0);" >ಫೋನ್ ನಂಬರ್</th>
+                                        <td>{{data.mobile_num}}</td>
+                                    </tr>
+                        </table>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered" style="border: 1px;" width="100%">
+                                <tbody>
+                                <tr style="background-color:rgba(217, 225, 242, 1.0);">
+                                    <th>#</th>
+                                    <th colspan="2">Date</th>                                    
+                                    <th>Variety Code</th>
+                                    <th>Vehicle No</th>
+                                    <th>WeighBridge Weight</th>
+                                    <th>Vehicle Weight</th>                                    
+                                    <th>Advance</th>
+                                    <th>Total Price</th>
+                                </tr>
+                                </tbody>
+                                <tbody>
+                                <tr>
+                                    <td>{{data.id}}</td>
+                                    <td>{{data.nursery_date}}</td>
+                                    <td>SUGAR CANE</td>                                    
+                                    <td>{{data.verity_no}}</td>
+                                    <td>{{data.vehicle_no}}</td>
+                                    <td>{{data.weibrage_weight}}</td>
+                                    <td>{{data.vehicle_weight}}</td>                                                                                               
+                                    <td>{{data.advance}}</td>
+                                    <td>{{data.total_price}}</td>
+                                </tr>                                
+                                </tbody>
+                        </table>
+                        <hr>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <img src="{% static 'assets/images/1.png' %}" alt="phonepay" width="70px" height="60px">
+                            <img src="{% static 'assets/images/2.png' %}" alt="Googlepay" width="70px" height="60px">
+                            <img src="{% static 'assets/images/3.png' %}" alt="paytmpay" width="70px" height="60px">
+                            <img src="{% static 'assets/images/4.png' %}" alt="Upipay" width="80px" height="60px">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <p>ನಮ್ಮಲ್ಲಿ ಎಲ್ಲಾ ತರಹದ ತರಕಾರಿ ಸಸಿಗಳನ್ನು ನರ್ಸರಿ ಮಾಡಿಕೊಡುತ್ತೆವೆ
+                                ಪಾಕೀಟ್‌ಬೀಜ ಅಥವಾ ಖುಲ್ಲಾ ಬೀಜದ ಯಾವುದೇ ಸಸಿಗಳನ್ನು
+                                ಬೆಳೆಸಿಕೊಂಡು ನರ್ಸರಿಯಿಂದ ಹೋದಮೇಲೆ ನಾವು ಯಾವುದೇ ಜವಾಬ್ದಾರಿ ಇರುವುದಿಲ್ಲ.</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p><b>ACCOUNT DETAILS
+                                NAVEEN SHANKRAPPA KATENAHALLI
+                                A/C NO : 600301010051173
+                                IFSC CODE : UBIN0560031
+                                BANK : UNION BANK OF INDIA
+                                BRANCH:BYADGI</b></p>
+                        </div>
+                        <div class="col-sm-3">
+                            <b><p style="float: right;">Signature</p></b>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                  </div> <!-- container-fluid -->
+              </div>
+              <!-- End Page-content -->
+
+
+
+        
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="static/assets/libs/jquery/jquery.min.js"></script>
+        <script src="static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="static/assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="static/assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="static/assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- apexcharts js -->
+        <script src="static/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+        <!-- jquery.vectormap map -->
+        <script src="static/assets/libs/jqvmap/jquery.vmap.min.js"></script>
+        <script src="static/assets/libs/jqvmap/maps/jquery.vmap.usa.js"></script>
+
+        <script src="static/assets/js/pages/dashboard.init.js"></script>
+
+        <script src="static/assets/js/app.js"></script>
+
+    </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,111 @@
+{% load static %}
+{% include 'sidebar.html' %}
+{% include 'header.html' %}
+{% block content %}
+
+
+<style>
+
+    .btn-primary {
+        color: #fff;
+        background-color: #098514;
+        border-color: #f2f2f3;
+    }
+    </style>
+<!doctype html>
+<html lang="en">
+
+
+<body data-sidebar="dark">
+
+<!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+
+<div class="main-content">
+
+<div class="page-content">
+<div class="container-fluid">
+<h1>Nursery List</h1>
+<!-- start page title -->
+
+<div class="row">
+<div class="col-12">
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0"></h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="{% url 'nursery_add' %}"><button type="submit" class="btn btn-primary" name="create">+Add New</button></a></li>
+                            
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Date</th>
+                    <th>Mobile No</th>
+                    <th>Sowing Date</th>
+                    <th>Lot No</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            {% for i in form %}
+            <tbody>
+                
+                
+<tr>
+<td>{{i.id}}</td>
+<td>{{i.farmer_name}}</td>
+<td>{{i.address}}</td>
+<td>{{i.nursery_date}}</td>
+<td>{{i.mobile_num}}</td>
+<td>{{i.swoing_date}}</td> 
+<td>{{i.lot_no}}</td>                                                   
+<td>
+<a href="{% url 'invoice_nursery' i.id %}" class="btn btn-primary btn-flat ">
+<i class="fas fa-eye"></i></a>
+<a href="{% url "nursery_delete" i.id %}" class="btn btn-danger btn-flat ">
+    <i class="fas fa-trash"></i></a>
+</td>
+
+</tr>
+</tbody>
+{% endfor %}  
+        </table>
+    </div>
+</div>
+</div> <!-- end col -->
+</div> <!-- end row -->
+
+</div> <!-- container-fluid -->
+</div>
+<!-- End Page-content -->
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+{% include 'footer.html' %}

@@ -1,0 +1,123 @@
+{% load static %}
+{% include 'sidebar.html' %}
+{% include 'header.html' %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<title>Nursery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+<meta content="Themesdesign" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+
+<!-- jvectormap -->
+<link href="{% static 'assets/libs/jqvmap/jqvmap.min.css' %}" rel="stylesheet" />
+
+<!-- Bootstrap Css -->
+<link href="{% static 'assets/css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="{% static 'assets/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="{% static 'assets/css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body data-sidebar="dark">
+
+<!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+
+<div class="main-content">
+
+<div class="page-content">
+<div class="container-fluid">
+<h1>Labour Customer List</h1>
+<!-- start page title -->
+<div class="row">
+<div class="col-12">
+<div class="card">
+<div class="card-body">
+<div class="row">
+<div class="col-12">
+<div class="page-title-box d-sm-flex align-items-center justify-content-between">
+<h4 class="mb-sm-0"></h4>
+
+<div class="page-title-right">
+<ol class="breadcrumb m-0">
+<li clas="breadcrumb-item"><a href="{% url 'labour_add' %}"><button type="submit" class="btn btn-primary" name="create">+Add New</button></a></li>
+
+</ol>
+</div>
+
+</div>
+</div>
+</div>
+<table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+<thead>
+<tr>
+<th>#</th>
+<th>Customer Name</th>
+<th>Mobile No</th>
+<th>Address</th>
+<th>Actions</th>
+</tr>
+</thead>
+{% for i in form %}
+<tbody>
+
+
+<tr>
+<td>{{i.id}}</td>
+<td>{{i.farmer_name}}</td>
+<td>{{i.mobile_num}}</td>
+<td>{{i.address}}</td>                                                
+<td><a href="{% url "labour_customer_delete" i.id %}" class="btn btn-danger btn-flat ">
+<i class="fas fa-trash"></i></a>
+</td>
+</tr>
+</tbody>
+{% endfor %}  
+</table>
+</div>
+</div>
+</div> <!-- end col -->
+</div> <!-- end row -->
+
+</div> <!-- container-fluid -->
+</div>
+<!-- End Page-content -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+{% include 'footer.html' %}

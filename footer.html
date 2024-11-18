@@ -1,0 +1,49 @@
+{% load static %}
+{% block content %}
+<footer class="footer">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-6">
+<script>document.write(new Date().getFullYear())</script> 
+</div>
+<div class="col-sm-6">
+<div class="text-sm-end d-none d-sm-block">
+inDataAi <i class="mdi mdi-heart text-danger"></i> Software Soulations
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="{% static 'assets/libs/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'assets/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/libs/metismenu/metisMenu.min.js' %}"></script>
+<script src="{% static 'assets/libs/simplebar/simplebar.min.js' %}"></script>
+<script src="{% static 'assets/libs/node-waves/waves.min.js' %}"></script>
+
+<!-- twitter-bootstrap-wizard js -->
+<script src="{% static 'assets/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js' %}"></script>
+
+<script src="{% static 'assets/libs/twitter-bootstrap-wizard/prettify.js' %}"></script>
+
+<!-- form wizard init -->
+<script src="{% static 'assets/js/pages/form-wizard.init.js' %}"></script>
+
+<script src="{% static 'assets/js/app.js' %}"></script>
+
+</body>
+</html>
+
+{% endblock %}

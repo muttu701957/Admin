@@ -1,0 +1,161 @@
+{% load static %}
+{% include 'sidebar.html' %}
+{% include 'header.html' %}
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+        
+    <meta charset="utf-8" />
+    <title>Nursery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesdesign" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+    
+    <!-- jvectormap -->
+    <link href="{% static 'assets/libs/jqvmap/jqvmap.min.css' %}" rel="stylesheet" />
+
+    <!-- Bootstrap Css -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="{% static 'assets/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="{% static 'assets/css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+    <body data-sidebar="dark">
+    
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                    <h1>System Settings
+                    </h1>
+                        <!-- start page title -->
+
+                        <section class="content">
+                            <div class="container-fluid">
+                               
+                    
+                                  <form action="" id="manage-system_settings">
+                      
+                              <input type="hidden" name="id" value="">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="form-group">
+                                                  <label for="" class="control-label">System Name</label>
+                                                  <input type="text" class="form-control form-control-sm" name="name" value="NAVAKARNATAKA">
+                                              </div>
+                                          </div>
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label for="" class="control-label">Contact</label>
+                                    <input type="text" class="form-control form-control-sm" name="contact" value="9685325748">
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label for="" class="control-label">Email</label>
+                                    <input type="email" class="form-control form-control-sm" name="email" value="info@sample.comm">
+                                  </div>
+                                </div>
+                                      </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="" class="control-label">Address</label>
+                                    <textarea name="address" id="" cols="30" rows="3" class="form-control">inDataAi</textarea>
+                                  </div>
+                                </div>
+                              </div>
+                              </form>
+                              </div>
+                            </div>
+                            <center> <div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
+                                        Save
+                                    </button>
+                                    <button type="reset" class="btn btn-secondary waves-effect">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div></center>
+                          </div>
+                      </div>
+                    </section>
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+                
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script>document.write(new Date().getFullYear())</script> © Upzet.
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                    Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesdesign
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+      
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="static/assets/libs/jquery/jquery.min.js"></script>
+        <script src="static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="static/assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="static/assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="static/assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="static/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="static/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="static/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="static/assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="static/assets/libs/jszip/jszip.min.js"></script>
+        <script src="static/assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="static/assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="static/assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="static/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="static/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="static/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="static/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+        <!-- Datatable init js -->
+        <script src="static/assets/js/pages/datatables.init.js"></script>
+
+        <script src="static/assets/js/app.js"></script>
+
+    </body>
+</html>
+{% endblock %}

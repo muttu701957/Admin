@@ -1,0 +1,182 @@
+{% load static %}
+{% include 'sidebar.html' %}
+{% include 'header.html' %}
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+
+
+
+<body data-sidebar="dark">
+<div id="layout-wrapper">
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+
+<div class="main-content">
+
+<div class="page-content">
+<div class="container-fluid">
+<div class="card">
+<div class="card-body">
+<h1>Invoice</h1>
+<hr>
+<!-- start page title -->
+
+<div class="row">
+<div class="col-sm-2">
+<img src="{% static 'assets/images/logo.png' %}" alt="logo" height="100px" width="100px">
+</div>
+<div class="col-sm-8">
+<center><h4 style="color: green;"><u>Shri Banashri Nursery farm</u></h4>
+<u><h5>At|| Angragatti.Ta|| Byadgi ||Dq :Haveri</h5></u></center>
+</div>
+<div class="col-sm-2">
+<h6>N:9242244731</h6>
+<h6>M:9591002731</h6>
+<h6>P:9535618731</h6>
+<h6>G:9972328131</h6>
+</div> 
+</div>
+<div class="row">
+<div class="col-sm-4">
+<table class="table table-bordered" style="border: 1px;">
+<thead >
+<tr style="background-color:rgba(217, 225, 242, 1.0);">
+<b>
+<th style="text-align: center;">Date</th>
+<th>Invoice</th>
+</b>
+</tr>
+</thead>
+<tbody>
+{% for i in form %}
+<tr >
+<td>{{i.nursery_date}}</td>
+<td>{{i.id}}</td>
+</tr>
+</tbody>
+{% endfor %}
+</table>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<table class="table table-bordered" style="border: 1px;">
+<tr style="background-color:rgba(217, 225, 242, 1.0);">
+<b>
+<th style="text-align: center;" colspan="2">Bill</th>
+</b>
+{% for i in form %}
+</tr>
+{% if forloop.first %}
+<tr>
+<th style="background-color:rgba(217, 225, 242, 1.0);width: 25%;">Name</th>
+<td>{{i.farmer_name}}</td>
+</tr>
+<tr>
+<th style="background-color:rgba(217, 225, 242, 1.0);" >Address</th>
+<td>{{i.address}}</td>
+</tr>
+{% endif %}
+{% endfor %}
+</table>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<table class="table table-bordered" style="border: 1px;">
+<tr style="background-color:rgba(217, 225, 242, 1.0);">
+<b>
+<th style="width:min-content;">#</th>
+<th>Description</th>
+<th>Tray No</th>
+<th>Price</th>
+<th>Total Amount</th>
+</b>
+</tr>
+
+{% for i in form %}
+<tr>
+<td>{{i.id}}</td>
+<td>{{i.description}}</td>
+<td>{{i.tray_no}}</td>
+<td>₹{{i.price}}</td>
+<td>₹{{i.total_price}}</td>
+</tr>
+<tr style="background-color:rgba(217, 225, 242, 1.0);">
+<td></td><td></td><td></td>
+<th>Total</th>
+<td>₹{{i.total_price}}</td>
+</tr>
+<tr style="background-color:rgba(217, 225, 242, 1.0);">
+<td></td><td></td><td></td>
+<th>Advance</th>
+<td>₹{{i.advance}}</td>
+</tr>
+<tr style="background-color:rgba(217, 225, 242, 1.0);">
+<td></td><td></td><td></td>
+<th>Total Amount</th>
+<td>₹<script>document.write({{i.total_price}}+{{i.advance}})</script></td>
+</tr>
+{% endfor %}
+</table>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<img src="{% static 'assets/images/1.png' %}" alt="phonepay" width="70px" height="60px">
+<img src="{% static 'assets/images/2.png' %}" alt="Googlepay" width="70px" height="60px">
+<img src="{% static 'assets/images/3.png' %}" alt="paytmpay" width="70px" height="60px">
+<img src="{% static 'assets/images/4.png' %}" alt="Upipay" width="80px" height="60px">
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<p>ನಮ್ಮಲ್ಲಿ ಎಲ್ಲಾ ತರಹದ ತರಕಾರಿ ಸಸಿಗಳನ್ನು ನರ್ಸರಿ ಮಾಡಿಕೊಡುತ್ತೆವೆ
+ಪಾಕೀಟ್‌ಬೀಜ ಅಥವಾ ಖುಲ್ಲಾ ಬೀಜದ ಯಾವುದೇ ಸಸಿಗಳನ್ನು
+ಬೆಳೆಸಿಕೊಂಡು ನರ್ಸರಿಯಿಂದ ಹೋದಮೇಲೆ ನಾವು ಯಾವುದೇ ಜವಾಬ್ದಾರಿ ಇರುವುದಿಲ್ಲ.</p>
+</div>
+<div class="col-sm-2">
+<img src="{% static 'assets/images/5.jpg' %}" alt="Qr" height="100px" width="100px">
+</div>
+<div class="col-sm-4">
+<b><p style="float: right;">ಸಹಿ</p></b>
+</div>
+</div>
+</div>
+</div>
+</div> <!-- container-fluid -->
+</div>
+<!-- End Page-content -->
+
+
+
+
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="static/assets/libs/jquery/jquery.min.js"></script>
+<script src="static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="static/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="static/assets/libs/node-waves/waves.min.js"></script>
+
+<!-- apexcharts js -->
+<script src="static/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+<!-- jquery.vectormap map -->
+<script src="static/assets/libs/jqvmap/jquery.vmap.min.js"></script>
+<script src="static/assets/libs/jqvmap/maps/jquery.vmap.usa.js"></script>
+
+<script src="static/assets/js/pages/dashboard.init.js"></script>
+
+<script src="static/assets/js/app.js"></script>
+
+</body>
+</html>
+
+{% endblock %}
